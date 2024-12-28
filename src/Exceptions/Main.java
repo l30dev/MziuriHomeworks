@@ -19,7 +19,8 @@ public class Main {
                         System.out.println("Element N"+(i+1));
                          arr[i] =scanner.nextInt();
                     }
-                    for(int i=0; i<n+4; i++){
+                    int index = scanner.nextInt();
+                    for(int i=0; i<index; i++){
                        sum+=arr[i];
                     }
                 }
@@ -45,15 +46,14 @@ public class Main {
                         System.out.println("Element N"+(i+1));
                         arr2[i] =scanner.nextInt();
                     }
-                    /*
                     int min = Math.min(n1,n2);
                     for(int i=0; i<min; i++){
                         System.out.println("Division of elements from index N"+(i));
-                        double res = (double) arr1[i] /arr2[i];
+                       int res =  arr1[i] /arr2[i];
                         System.out.println(res);
                     }
 
-                     */
+                     /*
                     for(int i=0; i<n1; i++){
                         for(int j=0; j<n2; j++){
                             System.out.println("Indexes: "+i+" and "+j);
@@ -61,7 +61,11 @@ public class Main {
                             System.out.println(res);
                         }
                     }
+
+                      */
                 }
+
+
                 catch(ArithmeticException e){
                     System.out.println("A division with zero occurred, error");
                 }

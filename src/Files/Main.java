@@ -55,6 +55,7 @@ public class Main {
                         sum += num;
                         str.append(" ");
                     }
+                    str.append('\n');
                     str.append("Value: ");
                     str.append(sum);
                     System.out.println(sum);

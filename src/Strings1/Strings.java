@@ -18,7 +18,7 @@ public class Strings {
                     String input1 = scanner.nextLine();
                     int digitCount = 0;
                     for (int i = 0; i < input1.length(); i++) {
-                        if (Character.isDigit(input1.charAt(i))) {
+                        if (input1.charAt(i)>='0' && input1.charAt(i)<='9') {
                             digitCount++;
                         }
                     }
@@ -62,7 +62,7 @@ public class Strings {
                     String s1 = scanner.nextLine();
                     System.out.print("Enter string s2 for Task 4: ");
                     String s2 = scanner.nextLine();
-                    boolean isSubstring = s2.contains(s1);
+                    boolean isSubstring = s1.contains(s2);
                     System.out.println("Substring check: " + isSubstring);
                     break;
 
@@ -70,11 +70,17 @@ public class Strings {
                     System.out.print("Enter a string for Task 5: ");
                     String input5 = scanner.nextLine();
                     String vowels = "aeiou";
+                    input5=input5.toLowerCase();
                     char lastChar = input5.charAt(input5.length() - 1);
-                    if (vowels.indexOf(Character.toLowerCase(lastChar)) != -1) {
+                    if (vowels.indexOf(lastChar) != -1) {
                         System.out.println("Ends with vowel");
-                    } else {
+                    }
+                    else if((lastChar>='a' && lastChar<='z')
+                    || (lastChar>='A' && lastChar<='Z')){
                         System.out.println("Ends with consonant");
+                    }
+                    else {
+                        System.out.println("Not a letter");
                     }
                     break;
 
@@ -94,7 +100,7 @@ public class Strings {
                     System.out.print("Enter a word for Task 7: ");
                     String input7 = scanner.nextLine();
                     if (input7.length() > 10) {
-                        String abbreviation = input7.charAt(0) + String.valueOf(input7.length() - 2) + input7.charAt(input7.length() - 1);
+                        String abbreviation = String.valueOf(input7.charAt(0) + (input7.length() - 2) + input7.charAt(input7.length() - 1));
                         System.out.println("Abbreviation: " + abbreviation);
                     } else {
                         System.out.println("Not huge: " + input7);
